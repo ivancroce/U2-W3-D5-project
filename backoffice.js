@@ -96,3 +96,14 @@ delBtn.onclick = function () {
       .catch((err) => console.error(err));
   }
 };
+
+//reset btn
+const resetBtn = document.getElementById("reset-btn");
+
+resetBtn.onclick = function () {
+  const confirmReset = confirm("Do you really want to reset all the fields?");
+  if (confirmReset) {
+    form.reset();
+    alert("Fields successfully reset.");
+  }
+};

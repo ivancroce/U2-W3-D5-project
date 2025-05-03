@@ -13,14 +13,14 @@ const isLoading = (boolean) => {
 
 // alert
 const generateAlert = (message) => {
-  const container = document.getElementById("main-container");
+  const alertContainer = document.getElementById("alert-container");
 
   const alert = document.createElement("div");
   alert.className = "alert alert-danger";
   alert.role = "alert";
   alert.innerText = message;
 
-  container.appendChild(alert);
+  alertContainer.appendChild(alert);
 
   isLoading(false);
 };
