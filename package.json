@@ -1,0 +1,27 @@
+{
+  "name": "u2-w3-d5-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss/main.scss public/css/main.css",
+    "sass:watch": "sass --watch src/scss/main.scss:public/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivancroce/U2-W3-D5-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivancroce/U2-W3-D5-project/issues"
+  },
+  "homepage": "https://github.com/ivancroce/U2-W3-D5-project#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.87.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.5"
+  }
+}

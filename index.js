@@ -25,6 +25,7 @@ const generateAlert = (message) => {
   isLoading(false);
 };
 
+// products
 const container = document.getElementById("products-container");
 
 const getProducts = () => {
@@ -51,17 +52,37 @@ const getProducts = () => {
 
       products.forEach((product) => {
         const col = document.createElement("div");
-        col.className = "col-sm-6 col-md-4 mb-4";
+        col.className = "col-sm-6 col-md-6 col-lg-4 mb-4";
 
         col.innerHTML = `
-        <div class="card h-100 shadow-sm">
-          <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}">
-          <div class="card-body">
-            <h5 class="card-title">${product.name}</h5>
-            <p class="card-text">${product.description}</p>
-            <p class="card-text"><strong>${product.price}€</strong></p>
-            <a href="details.html?id=${product._id}" class="btn btn-primary">Scopri di più</a>
-            <a href="backoffice.html?id=${product._id}" class="btn btn-warning ms-2">Modifica</a>
+          <div class="card card-tech h-100">
+            <img
+              src="${product.imageUrl}"
+              class="card-img-top h-auto"
+              alt="${product.name}"
+            />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">${product.name}</h5>
+                <p class="teacher-name">by ${product.brand}</p>
+                <p class="card-text text-muted small">
+                  ${product.description}
+                </p>
+              </div>
+              <div class="mt-3 d-flex flex-wrap justify-content-between align-items-center">
+                <span class="price-tag">${product.price} €</span>
+                <div class="d-flex gap-2 mt-2">
+                  <a href="details.html?id=${product._id}" class="btn btn-primary d-inline-flex align-items-center gap-1 py-2">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>Learn More</span>
+                  </a>
+                  <a href="backoffice.html?id=${product._id}" class="btn btn-warning d-inline-flex align-items-center gap-1 py-2">
+                    <i class="bi bi-pencil"></i>
+                    <span>Edit</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       `;

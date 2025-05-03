@@ -38,6 +38,7 @@ window.onload = function () {
   }
 };
 
+// Form onsubmit function
 form.onsubmit = function (e) {
   e.preventDefault();
 
@@ -46,7 +47,7 @@ form.onsubmit = function (e) {
     description: document.getElementById("description").value,
     brand: document.getElementById("brand").value,
     imageUrl: document.getElementById("imageUrl").value,
-    price: parseFloat(document.getElementById("price").value)
+    price: document.getElementById("price").value
   };
   console.log("Sending product:", newProduct);
 
