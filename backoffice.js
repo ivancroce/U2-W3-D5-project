@@ -13,7 +13,7 @@ window.onload = function () {
   const title = document.getElementById(`title`);
 
   if (productId) {
-    title.innerText = `- Edit product`;
+    title.innerText = `Edit product`;
     delBtn.classList.remove(`d-none`);
 
     fetch(URL, {
@@ -34,7 +34,7 @@ window.onload = function () {
       })
       .catch((err) => console.error(err));
   } else {
-    title.innerText = `- Create new product`;
+    title.innerText = `Create new product`;
   }
 };
 

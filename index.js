@@ -56,11 +56,11 @@ const getProducts = () => {
 
         col.innerHTML = `
           <div class="card card-tech h-100">
+          <a href="details.html?id=${product._id}">
             <img
               src="${product.imageUrl}"
               class="card-img-top h-auto"
-              alt="${product.name}"
-            />
+              alt="${product.name}"/></a>
             <div class="card-body d-flex flex-column justify-content-between">
               <div>
                 <h5 class="card-title">${product.name}</h5>
@@ -77,7 +77,7 @@ const getProducts = () => {
                     <span>Learn More</span>
                   </a>
                   <a href="backoffice.html?id=${product._id}" class="btn btn-warning d-inline-flex align-items-center gap-1 py-2">
-                    <i class="bi bi-pencil"></i>
+                    <i class="bi bi-pencil-square"></i>
                     <span>Edit</span>
                   </a>
                 </div>
@@ -98,6 +98,17 @@ const getProducts = () => {
       isLoading(false);
     });
 };
+
+// function to change navbar color when scrolling
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
 
 window.onload = function () {
   getProducts();
